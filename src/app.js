@@ -19,7 +19,6 @@ app.set('view engine','hbs');
 app.set('views',viewsPath);
 hbs.registerPartials(partialsPath);
 
-
 //getiing
 app.get('',(req,res) => {
     res.render('index',{

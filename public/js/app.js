@@ -1,7 +1,7 @@
 
 let search='';
 const description=document.querySelector('.description');
-/* 
+
 document.querySelector('button').addEventListener('click',buttonClicked)
 document.querySelector('.search').addEventListener('keypress',(e)=>{
     search=e.target.value;
@@ -23,4 +23,4 @@ function buttonClicked(){
             }
         })
     })
-} */
+} 

@@ -8,7 +8,7 @@ const forcast=require('./utils/forecast');
 
 
 const app = express();
-const port=process.env.PORT || 3000;
+const port = process.env.PORT || 3000
 //Paths
 const publicPath=path.join(__dirname,'../public')
 const viewsPath=path.join(__dirname,'../templates/views');
@@ -21,7 +21,7 @@ app.set('views',viewsPath);
 hbs.registerPartials(partialsPath);
 
 //getiing
-app.get('/',(req,res) => {
+app.get('',(req,res) => {
     res.render('index',{
         title:'Weather app',
         name:'Boulhend brahim',
@@ -31,16 +31,12 @@ app.get('/weather',(req,res) => {
     const address=req.query.address;
     if(!address){
         return res.send({
-            title:'Weather app',
-            name:'Boulhend brahim',
             error:'no result you mus specify an address'
         }) 
 
     }
     forcast(address).then(response => {
         res.send({
-            title:'Weather app',
-            name:'Boulhend brahim',
             desc:`The weather in ${address} is ${response}`
         }) 
     })

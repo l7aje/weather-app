@@ -14,10 +14,11 @@ function buttonClicked(){
     description.textContent='Loading...';
     fetch(`/weather?address=${search}`).then((response) => {
         response.json().then((data) => {
+            description.textContent='';
             if (data.error) {
-                description.textContent = data.error
+                description.textContent = data.error;
             } else {
-                description.textContent = data.desc
+                description.textContent = data.desc;
                
             }
         })

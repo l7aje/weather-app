@@ -11,6 +11,6 @@ document.querySelector('.search').addEventListener('keypress',(e)=>{
 })
 
 function buttonClicked(){
-    window.location.pathname=`/weather?address=${search}`;
+    window.location.href=`https://boulhend-weather-app.herokuapp.com/weather?address=${search}`;
     description.textContent='Loading...';
 }

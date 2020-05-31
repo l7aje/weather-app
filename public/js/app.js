@@ -11,6 +11,6 @@ document.querySelector('.search').addEventListener('keypress',(e)=>{
 })
 
 function buttonClicked(){
-    window.location.href=`http://localhost:3000/weather?address=${search}`;
+    window.location.pathname=`/weather?address=${search}`;
     description.textContent='Loading...';
 }

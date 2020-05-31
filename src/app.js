@@ -30,18 +30,18 @@ app.get('/',(req,res) => {
 app.get('/weather',(req,res) => {
     const address=req.query.address;
     if(!address){
-        return res.render('index',{
+        return res.send({
             title:'Weather app',
             name:'Boulhend brahim',
-            description:'no result you mus specify an address'
+            error:'no result you mus specify an address'
         }) 
 
     }
     forcast(address).then(response => {
-        res.render('index',{
+        res.send({
             title:'Weather app',
             name:'Boulhend brahim',
-            description:`The weather in ${address} is ${response}`
+            desc:`The weather in ${address} is ${response}`
         }) 
     })
     

@@ -11,6 +11,15 @@ document.querySelector('.search').addEventListener('keypress',(e)=>{
 })
 
 function buttonClicked(){
-    window.location.href+=`weather?address=${search}`;
     description.textContent='Loading...';
+    fetch(`/weather?address=${search}`).then((response) => {
+        response.json().then((data) => {
+            if (data.error) {
+                description.textContent = data.error
+            } else {
+                description.textContent = data.desc
+               
+            }
+        })
+    })
 }

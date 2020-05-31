@@ -6,9 +6,9 @@ const forcast= async(address) => {
     try{
         const response= await axios.get(url);
         const data= response.data.weather[0].description;
-        return `${data}`
+        return `The weather in ${address} is ${data}`
     }catch(error){
-        return 'location non valid try again';
+        return 'query non valid try again';
     }
     
     

@@ -37,7 +37,7 @@ app.get('/weather',(req,res) => {
     }
     forcast(address).then(response => {
         res.send({
-            desc:`The weather in ${address} is ${response}`
+            desc:`${response}`
         }) 
     })
     

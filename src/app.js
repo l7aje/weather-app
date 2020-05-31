@@ -21,7 +21,7 @@ app.set('views',viewsPath);
 hbs.registerPartials(partialsPath);
 
 //getiing
-app.get('',(req,res) => {
+app.get('/',(req,res) => {
     res.render('index',{
         title:'Weather app',
         name:'Boulhend brahim',

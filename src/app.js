@@ -27,7 +27,7 @@ app.get('',(req,res) => {
         name:'Boulhend brahim',
     })
 }); 
-app.get('/weather',(req,res) => {
+/* app.get('/weather',(req,res) => {
     const address=req.query.address;
     if(!address){
         return res.send({
@@ -43,13 +43,14 @@ app.get('/weather',(req,res) => {
     
     
 }); 
+*/
 app.get('/about',(req,res) => {
     res.render('about',{
         title:'About',
         name:'Boulhend brahim'
     })
 }); 
-
+ 
 app.get('/products',(req,res) => {
     if(!req.query.search){
         return res.send({
